@@ -4,17 +4,19 @@ public class Reservation
 {
     private int reservationId;
     private int guestId;
+    private Room room;
     private int checkInDate;
     private int checkOutDate;
     private String status;
     public Reservation() {}
-    public Reservation(int guestId, int reservationId, int checkInDate, int checkOutDate, String status)
+    public Reservation(int guestId, int reservationId, int checkInDate, int checkOutDate, String status, Room room)
     {
         this.guestId = guestId;
         this.reservationId = reservationId;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.status = status;
+        this.room = room;
     }
 
     public int getReservationId() {
@@ -52,6 +54,13 @@ public class Reservation
     public void setStatus(String status) {
         this.status = status;
     }
+    public Room getRoom() {
+        return room;
+    }
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
     @Override
     public String toString() {
         return "Reservation { " +

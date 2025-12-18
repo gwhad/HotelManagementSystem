@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="430.0" prefWidth="700.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.RoomController">
+   <children>
+      <HBox layoutX="102.0" layoutY="33.0" prefHeight="30.0" prefWidth="495.0" spacing="200.0" styleClass="navbar" stylesheets="@style.css">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="29.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goToHome" styleClass="nav-btn" stylesheets="@style.css" text="Home" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="Room" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="About" textFill="WHITE" onAction="#goToAbout">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="Book" textFill="WHITE" onAction="#goToBook">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="60.0" layoutY="144.0" prefHeight="271.0" prefWidth="572.0" spacing="10.0" styleClass="hbx" stylesheets="@style.css">
+         <children>
+            <StackPane prefHeight="255.0" prefWidth="170.0" styleClass="room-image" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="singleroom" fitHeight="255.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" styleClass="room-image">
+                     <image>
+                        <Image url="@../../../../../../../../Downloads/singleroom.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" styleClass="custom-btn" stylesheets="@style.css" text="See More" onAction="#goToSingleRoom" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="255.0" prefWidth="170.0" styleClass="room-image" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="doubleroom" fitHeight="248.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../Downloads/doubleroom.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" styleClass="custom-btn" stylesheets="@style.css" text="See More" onAction="#goTodoubleroom" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="255.0" prefWidth="170.0" styleClass="room-image" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="suiteroom" fitHeight="255.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../Downloads/suite.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" styleClass="custom-btn" stylesheets="@style.css" text="See More" onAction="#goTosuite" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <Label layoutX="287.0" layoutY="88.0" text="Our Rooms" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="123.0" text="Choose from our carefully designed rooms for comfort and elegance." textFill="WHITE" />
+   </children>
+</AnchorPane>

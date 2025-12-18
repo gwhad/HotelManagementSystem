@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="430.0" prefWidth="700.0" styleClass="root1" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.AboutController">
+   <children>
+      <ImageView fx:id="Alex" fitHeight="282.0" fitWidth="538.0" layoutX="90.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/Alex.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="269.0" layoutY="179.0" text="Some Reviews" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="90.0" layoutY="225.0" prefHeight="178.0" prefWidth="538.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="8.0" layoutY="1.0" styleClass="stars" stylesheets="@style.css" text="★★★★★" />
+                  <Label layoutX="8.0" layoutY="28.0" text="Great experience!">
+                     <font>
+                        <Font name="System Bold" size="12.179104804992676" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="49.0" prefHeight="81.0" prefWidth="135.0" text="I really enjoyed my stay at this hotel. &#10;The room was clean and comfortable,&#10; and the sea view was amazing. &#10;The staff were friendly, &#10;and everything felt calm and relaxing.&#10;I would definitely visit again.">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="162.0" prefWidth="180.0" styleClass="pane" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="11.0" layoutY="1.0" styleClass="stars" stylesheets="@style.css" text="★★★★★" />
+                  <Label layoutX="11.0" layoutY="27.0" text="Lovely stay!">
+                     <font>
+                        <Font name="System Bold" size="12.179104804992676" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="52.0" prefHeight="46.0" prefWidth="153.0" text="The hotel is beautiful and very relaxing.&#10;Clean rooms, great view, and nice service. &#10;Highly recommended.">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="15.0" layoutY="1.0" styleClass="stars" stylesheets="@style.css" text="★★★★★" />
+                  <Label layoutX="14.0" layoutY="28.0" text="Perfect getaway">
+                     <font>
+                        <Font name="System Bold" size="12.179104804992676" />
+                     </font>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="45.0" prefHeight="46.0" prefWidth="175.0" text="Everything was comfortable and well organized.&#10; The location is amazing and the atmosphere is&#10; very peaceful. I enjoyed every moment.">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="102.0" layoutY="32.0" prefHeight="27.0" prefWidth="495.0" spacing="200.0" styleClass="navbar" stylesheets="@style.css">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="24.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false"  styleClass="nav-btn" stylesheets="@style.css" text="Home" textFill="WHITE" onAction="#goToHome">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="Room" textFill="WHITE" onAction="#goToRoom">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="About" textFill="WHITE">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="Book" textFill="WHITE" onAction="#goToBook">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

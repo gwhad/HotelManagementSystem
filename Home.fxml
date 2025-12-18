@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.HomeController">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="470.0" fitWidth="700.0" preserveRatio="false" />
+      <AnchorPane prefHeight="430.0" prefWidth="700.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="102.0" layoutY="32.0" prefHeight="27.0" prefWidth="495.0" spacing="200.0" styleClass="navbar" stylesheets="@style.css">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="29.0">
+                     <children>
+                        <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="Home" textFill="WHITE">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#goToRoom" styleClass="nav-btn" stylesheets="@style.css" text="Room" textFill="WHITE">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="About" textFill="WHITE" onAction="#goToAbout">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" styleClass="nav-btn" stylesheets="@style.css" text="Book" textFill="WHITE" onAction="#goToBook">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" layoutX="49.0" layoutY="116.0" prefHeight="300.0" prefWidth="600.0" spacing="10.0" AnchorPane.topAnchor="116.0">
+               <children>
+                  <Label text="Welcome to Our Seaside Hotel in Alexandria!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label text="                    Experience an exceptional stay where comfort meets luxury.&#10; Our rooms are thoughtfully designed to provide a peaceful and memorable experience, &#10;                     with breathtaking views of the Mediterranean Sea." textFill="WHITE">
+                     <font>
+                        <Font />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label text="          Discover our premium services from delicious cuisine at our restaurants&#10; to relaxation in our leisure facilitiesevery moment is crafted to make your stay unforgettable." textFill="WHITE">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label text="Book now and enjoy an unparalleled stay!" textFill="WHITE">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Button mnemonicParsing="false" styleClass="custom-btn" stylesheets="@style.css" text="Book Now" textFill="WHITE" onAction="#goToBook">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

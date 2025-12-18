@@ -1,0 +1,83 @@
+.navbar {
+    -fx-background-color: rgba(0, 0, 0, 0.35);
+    -fx-padding: 8 30 8 30;
+
+    -fx-background-radius: 20;
+    -fx-border-radius: 40;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 4);
+}
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Hover */
+.nav-btn:hover {
+    -fx-text-fill: #007bff;
+}
+.custom-btn {
+    -fx-background-color: #C6A15B;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+}
+.root {
+    -fx-background-color: #98785c;
+}
+.hbx{
+    -fx-background-color: #ccbbab;
+    -fx-background-radius: 20;
+}
+.room-image {
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+.room-image:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+.stars {
+    -fx-text-fill: gold;
+    -fx-font-size: 18px;
+}
+
+.transparent-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+
+.transparent-btn:hover {
+    -fx-text-fill: #333333;
+}
+.old-price {
+    -fx-text-fill: gray;
+    -fx-font-size: 12px;
+    -fx-strikethrough: true;
+}
+
+.new-price {
+    -fx-text-fill: #c6a15b;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.root1 {
+    -fx-background-color: #9ebecc;
+}
+.pane {
+    -fx-background-color: #ffffff;
+}
+.text-field {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0; /* لجعلها مستطيلة بدون حواف مدورة */
+    -fx-border-color: #cccccc; /* اختياري لإضافة إطار خفيف */
+    -fx-border-radius: 0;
+}
+
+
+
+
+

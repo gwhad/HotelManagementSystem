@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.singleroomController">
+   <children>
+      <ImageView fx:id="singleroom" fitHeight="316.0" fitWidth="265.0" layoutX="22.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@singleroom.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="271.0" layoutY="57.0" styleClass="stars" stylesheets="@style.css" text="★★★★★" />
+      <Label layoutX="369.0" layoutY="63.0" text="12 Review" textFill="#777373">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="84.0" text="Single Room">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="250.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToRoom" prefHeight="35.0" prefWidth="27.0" styleClass="transparent-btn" stylesheets="@style.css">
+         <graphic>
+            <ImageView fx:id="icon" fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-black">
+               <image>
+                  <Image url="@icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="271.0" layoutY="138.0" text="It has a single bed , Air Conditioning,Free Wi-Fi ,Flat-Screen TV &#10;and Private Bathroom" textFill="#777373" />
+      <Label layoutX="269.0" layoutY="240.0" text="Status :">
+         <font>
+            <Font name="System Bold" size="12.179104804992676" />
+         </font>
+      </Label>
+      <Label layoutX="318.0" layoutY="240.0" text="Available" textFill="#777373" />
+      <Label layoutX="271.0" layoutY="198.0" text="Starts from" textFill="#777373" />
+      <HBox alignment="CENTER" layoutX="334.0" layoutY="193.0" prefHeight="27.0" prefWidth="75.0" spacing="7.0">
+         <children>
+            <Label styleClass="old-price" stylesheets="@style.css" text="\$550">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label styleClass="new-price" stylesheets="@style.css" text="\$450">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="409.0" layoutY="200.0" text="/ Night">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="272.0" text="Guset :">
+         <font>
+            <Font name="System Bold" size="12.179104804992676" />
+         </font>
+      </Label>
+      <Label layoutX="318.0" layoutY="272.0" text="1" textFill="#777373" />
+      <Label layoutX="271.0" layoutY="305.0" text="Beds :">
+         <font>
+            <Font name="System Bold" size="12.179104804992676" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="305.0" text="1" textFill="#777373" />
+      <Button layoutX="272.0" layoutY="347.0" mnemonicParsing="false" styleClass="custom-btn" stylesheets="@style.css" text="Book Now" onAction="#goToBook"/>
+   </children>
+</AnchorPane>

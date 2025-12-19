@@ -3,7 +3,6 @@ package Classes;
 public class Reservation
 {
     private int reservationId;
-    private int guestId;
     private Room room;
     private String checkInDate;
     private String checkOutDate;
@@ -39,10 +38,6 @@ public class Reservation
         this.reservationId = reservationId;
     }
 
-    public void setGuestId(int guestId) {
-        this.guestId = guestId;
-    }
-
     public void setCheckInDate(String checkInDate) {
         this.checkInDate = checkInDate;
     }
@@ -63,14 +58,15 @@ public class Reservation
 
     @Override
     public String toString() {
-        return "Reservation { " +
-                "id=" + reservationId +
-                ", guestId=" + guestId +
-                ", checkIn=" + checkInDate +
-                ", checkOut=" + checkOutDate +
+        return "Reservation{" +
+                "reservationId=" + reservationId +
+                ", checkInDate='" + checkInDate + '\'' +
+                ", checkOutDate='" + checkOutDate + '\'' +
                 ", status='" + status + '\'' +
-                " }";
+                ", room ID=" + room.getRoomId() +
+                '}';
     }
+
 
     //calculateTotal()
     //addRoom()

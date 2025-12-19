@@ -63,11 +63,11 @@ end
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Reservation')
 BEGIN	
  create table Reservation(
-    reservation_id int primary key,
+    reservationId int primary key,
 	guest_id       int IDENTITY(1, 1) not null,
-	check_in_date  date null,
-	check_out_date date null,
-	guest_status   varchar(20) not null,
+	checkInDate  date null,
+	checkOutDate date null,
+	status   varchar(20) not null,
 	roomId		int not null,
 	foreign key (roomId) references Room (roomId),
 	foreign key  (guest_id) references Guest (guest_id)
@@ -100,7 +100,7 @@ create table Payment(
 	payment_date date null,
 	payment_method varchar(20) null,
 	status varchar(20) not null
-	foreign key (res_id) references Reservation (reservation_id),
+	/*foreign key (res_id) references Reservation (reservation_id),*/
 );
 end
 
@@ -137,10 +137,22 @@ VALUES
     (11, 202, 2, 0, 800, 'Double room'),
     (12, 303, 6, 0, 1500, 'suite');
 select * from Room;
-insert into Reservation(reservation_id,check_in_date,check_out_date,guest_status, roomId )
+IF NOT EXISTS (SELECT 1 FROM Reservation WHERE reservationId=101)
+begin
+insert into Reservation(reservationId,checkInDate,checkOutDate,status, roomId )
 values
-    (101, '2025-01-10', '2025-01-15', 'Checked-In',10),
+    (101, '2025-01-10', '2025-01-15', 'Checked-In',10);
+end
+IF NOT EXISTS (SELECT 1 FROM Reservation WHERE reservationId=102)
+begin
+insert into Reservation(reservationId,checkInDate,checkOutDate,status, roomId )
+values
     (102, '2025-02-01', '2025-02-05', 'Booked', 11)
+end
+SELECT r.reservationId, r.checkInDate, r.checkOutDate, r.status,
+       rm.roomId, rm.roomNum, rm.capacity, rm.isAvailable, rm.pricePerNight, rm.roomDescription
+FROM Reservation r
+JOIN Room rm ON r.roomId = rm.roomId
 GO
 select * from Reservation;
 

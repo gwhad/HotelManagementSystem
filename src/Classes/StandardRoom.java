@@ -24,9 +24,9 @@ package Classes;
 
 public class StandardRoom extends Room {
 
-    /*public StandardRoom(int roomId) throws InvalidDataException {
-       super(roomId, 1, 0, false, 0, "");
-    }*/
+    public StandardRoom(){
+
+    }
 
 
     public StandardRoom(int roomId, int roomNum, int capacity, boolean isAvailable, int pricePerNight, String roomDescription) throws InvalidDataException {

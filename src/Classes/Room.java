@@ -10,7 +10,9 @@ public abstract class Room {
 
     public Room() {
     }
-
+    public Room(int roomId) {
+        this.roomId = roomId;
+    }
     public Room(int roomId, int roomNum, int capacity, boolean isAvailable, int pricePerNight, String roomDescription)throws InvalidDataException  {
         setRoomId(roomId);
         setRoomNum(roomNum);

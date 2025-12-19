@@ -59,11 +59,12 @@ create table Room(
 	
 );
 end
+
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Reservation')
 BEGIN	
  create table Reservation(
     reservation_id int primary key,
-	guest_id       int not null,
+	guest_id       int IDENTITY(1, 1) not null,
 	check_in_date  date null,
 	check_out_date date null,
 	guest_status   varchar(20) not null,
@@ -136,10 +137,10 @@ VALUES
     (11, 202, 2, 0, 800, 'Double room'),
     (12, 303, 6, 0, 1500, 'suite');
 select * from Room;
-insert into Reservation(reservation_id ,guest_id,check_in_date,check_out_date,guest_status, roomId )
+insert into Reservation(reservation_id,check_in_date,check_out_date,guest_status, roomId )
 values
-    (101, 1, '2025-01-10', '2025-01-15', 'Checked-In',10),
-    (102, 2, '2025-02-01', '2025-02-05', 'Booked', 11)
+    (101, '2025-01-10', '2025-01-15', 'Checked-In',10),
+    (102, '2025-02-01', '2025-02-05', 'Booked', 11)
 GO
 select * from Reservation;
 

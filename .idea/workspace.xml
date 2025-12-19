@@ -5,52 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1acb843-1549-4d21-a6b2-35d8eeab8665" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hotel Management System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IntelliLang.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_13_2_1_jre11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mssql_jdbc_13_2_1_jre11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Booking.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/DoubleRoom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Guest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/InvalidDataException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Reservation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/SingleRoom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Classes/Suite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/DB/SQLQuery2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Booking.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/DoubleRoom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Guest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/InvalidDataException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Payment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Room.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/SingleRoom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Classes/Suite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/DB/SQLQuery2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classes/ReservationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classes/ReservationMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotelManagementSystem/Classes/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotelManagementSystem/Classes/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotelManagementSystem/Classes/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HotelManagementSystem/Classes/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HotelManagementSystem/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/MainRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/StandardRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/StandardRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DB/SQLQuery3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/SQLQuery3.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SQLQuery3.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="36yyLxT0SZcrvHc8rTN64WxwyZu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,6 +46,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.Main1.executor": "Run",
+    "Application.MainRoom.executor": "Run",
+    "Application.MainService.executor": "Run",
+    "Application.ReservationMain.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -69,6 +60,11 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming files\HotelManagementSystem\src\DB" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e1acb843-1549-4d21-a6b2-35d8eeab8665" name="Changes" comment="" />

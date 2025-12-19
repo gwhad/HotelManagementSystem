@@ -5,29 +5,29 @@ public class Reservation
     private int reservationId;
     private int guestId;
     private Room room;
-    private int checkInDate;
-    private int checkOutDate;
+    private String checkInDate;
+    private String checkOutDate;
     private String status;
     public Reservation() {}
-    public Reservation(int guestId, int reservationId, int checkInDate, int checkOutDate, String status, Room room)
+    public Reservation( int reservationId, String checkInDate, String checkOutDate, String status, Room room)
     {
-        this.guestId = guestId;
+
         this.reservationId = reservationId;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.status = status;
         this.room = room;
     }
-
+    public int getRoomId(){return room.getRoomId();}
     public int getReservationId() {
         return reservationId;
     }
 
-    public int getCheckInDate() {
+    public String getCheckInDate() {
         return checkInDate;
     }
 
-    public int getCheckOutDate() {
+    public String getCheckOutDate() {
         return checkOutDate;
     }
 
@@ -43,11 +43,11 @@ public class Reservation
         this.guestId = guestId;
     }
 
-    public void setCheckInDate(int checkInDate) {
+    public void setCheckInDate(String checkInDate) {
         this.checkInDate = checkInDate;
     }
 
-    public void setCheckOutDate(int checkOutDate) {
+    public void setCheckOutDate(String checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
 

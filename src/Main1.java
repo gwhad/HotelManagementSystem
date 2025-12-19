@@ -1,8 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) throws Exception {
 
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

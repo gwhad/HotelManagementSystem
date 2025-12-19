@@ -23,33 +23,63 @@ public class ReservationDAO {
     }
     public List<Reservation> getAllRes()throws SQLException , InvalidDataException{
         List<Reservation> reservations = new ArrayList<>();
-        String sql = "SELECT * FROM Reservation";
+        String sql = /*"SELECT * FROM Reservation";*/"SELECT r.reservationId, r.checkInDate, r.checkOutDate, r.status, " +
+                "r.guest_id, rm.roomId, rm.roomNum, rm.capacity, rm.isAvailable, rm.pricePerNight, rm.roomDescription " +
+                        "FROM Reservation r " +
+                        "JOIN Room rm ON r.roomId = rm.roomId";
         try (Connection conn=getConnection();
              PreparedStatement stmt= conn.prepareStatement(sql);
              ResultSet rs= stmt.executeQuery()){
 
             while (rs.next()){
-                int idFromDB = rs.getInt("roomId");
-                Room room = new StandardRoom(idFromDB);
+                int reservationId = rs.getInt("reservationId");
+                String checkIn = rs.getString("checkInDate");
+                String checkOut = rs.getString("checkOutDate");
+                String status = rs.getString("status");
+                //room
+                int roomId = rs.getInt("roomId");
+                int roomNum= rs.getInt("roomNum");
+                int capacity = rs.getInt("capacity");
+                boolean isAvailable = rs.getBoolean("isAvailable");
+                int price = rs.getInt("pricePerNight");
+                String desc= rs.getString("roomDescription");
+                Room room=new StandardRoom(roomId, roomNum, capacity, isAvailable, price, desc);
+
+                //link
+                Reservation reservation=new Reservation(reservationId,checkIn,checkOut,status,room);
+                 reservations.add(reservation);
+                 }
+                 }
+
+
+                /*int idFromDB = rs.getInt("roomId");
+                Room room;
+                try {
+                     room = new StandardRoom(idFromDB);
+                }
+                catch (InvalidDataException e){
+                    System.out.println("Invalid Room ID in Database: " + idFromDB);
+                    room = new StandardRoom(1,1,0,false,0,"");
+                }
 
                 Reservation reservation=new Reservation(
-                        rs.getInt("reservation_id"),
-                        rs.getString("check_in_date"),
-                        rs.getString("check_out_date"),
-                        rs.getString("guest_status"),
+                        rs.getInt("reservationId"),
+                        rs.getString("checkInDate"),
+                        rs.getString("checkOutDate"),
+                        rs.getString("status"),
                         room
                 ) {};
                 reservations.add(reservation);
             }
 
-        }
+        }*/
 
         return reservations;
     }
 
     public void addReservation(Reservation reservation) throws SQLException{
         String sql="INSERT INTO Reservation " +
-                "(reservation_id ,check_in_date,check_out_date,guest_status, roomId)"+ "VALUES" +
+                "(reservationId ,checkInDate,checkOutDate,status, roomId)"+ "VALUES" +
                 "(?,?,?,?,?)";
         try(Connection conn=getConnection();
             PreparedStatement stmt= conn.prepareStatement(sql) ){
@@ -69,7 +99,7 @@ public class ReservationDAO {
 
     }
     public boolean isResExists(int reservationId) throws SQLException {
-        String sql = "SELECT COUNT(*) FROM Reservation WHERE reservation_id = ?";
+        String sql = "SELECT COUNT(*) FROM Reservation WHERE reservationId = ?";
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, reservationId);

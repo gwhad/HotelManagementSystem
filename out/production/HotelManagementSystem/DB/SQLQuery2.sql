@@ -57,7 +57,7 @@ BEGIN
 	check_in_date  date null,
 	check_out_date date null,
 	guest_status   varchar(20) not null,
-	room_id		int not null
+	room_id		int not null,
 	foreign key (room_id) references Room (room_id),
 	foreign key  (guest_id) references Guest (guest_id),
 	);

@@ -24,7 +24,7 @@ public class ReservationDAO {
     public List<Reservation> getAllRes()throws SQLException , InvalidDataException{
         List<Reservation> reservations = new ArrayList<>();
         String sql = /*"SELECT * FROM Reservation";*/"SELECT r.reservationId, r.checkInDate, r.checkOutDate, r.status, " +
-                "r.guest_id, rm.roomId, rm.roomNum, rm.capacity, rm.isAvailable, rm.pricePerNight, rm.roomDescription " +
+                "rm.roomId, rm.roomNum, rm.capacity, rm.isAvailable, rm.pricePerNight, rm.roomDescription " +
                         "FROM Reservation r " +
                         "JOIN Room rm ON r.roomId = rm.roomId";
         try (Connection conn=getConnection();

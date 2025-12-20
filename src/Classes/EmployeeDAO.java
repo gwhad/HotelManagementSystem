@@ -22,12 +22,12 @@ public class EmployeeDAO {
 
             while (rs.next()) {
                 Employee emp = new Employee(
-                        rs.getInt("employee_id"),
-                        rs.getString("first_name"),
-                        rs.getString("last_name"),
+                        rs.getInt("employeeId"),
+                        rs.getString("firstName"),
+                        rs.getString("lastName"),
                         rs.getString("email"),
                         rs.getString("phone"),
-                        rs.getString("employee_role")
+                        rs.getString("role")
                 );
                 employees.add(emp);
             }
@@ -38,7 +38,7 @@ public class EmployeeDAO {
 
 
     public void addEmployee(Employee emp) throws SQLException {
-        String query = "INSERT INTO Employee (employee_id, first_name, last_name, email, phone, employee_role) VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO Employee (employeeId, firstName, lastName, email, phone, role) VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = DriverManager.getConnection(url);
              PreparedStatement ps = conn.prepareStatement(query)) {
 
@@ -55,7 +55,7 @@ public class EmployeeDAO {
 
 
     public boolean isEmployeeExist(int employeeID) throws SQLException {
-        String query = "SELECT COUNT(*) FROM Employee WHERE employee_id = ?";
+        String query = "SELECT COUNT(*) FROM Employee WHERE employeeId = ?";
         try (Connection conn = DriverManager.getConnection(url);
              PreparedStatement ps = conn.prepareStatement(query)) {
             ps.setInt(1, employeeID);

@@ -25,25 +25,25 @@ end
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Employee')
 BEGIN
  create table Employee(
-    employee_id  int primary key,
-	first_name   varchar(50) null,
-	last_name   varchar(50) null,
+    employeeId  int primary key,
+	firstName   varchar(50) null,
+	lastName   varchar(50) null,
 	email       varchar(255) not null,
 	phone       varchar(20)  not null,
-	employee_role       varchar(50)   not null
+	role       varchar(50)   not null
 
 	);
 	end
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Guest')
 BEGIN
 create table Guest(
-    id_number int Unique,
-	guest_id  int primary key,
-	first_name   varchar(50) null,
-	last_name   varchar(50) null,
+    idNumber int Unique,
+	guestId  int primary key,
+	firstName   varchar(50) null,
+	lastName   varchar(50) null,
 	email       varchar(255) not null,
 	phone       varchar(20)  not null,
-	guest_address varchar(200) not null,
+	address varchar(200) not null
 	);
 select * from Guest;
 end
@@ -72,16 +72,18 @@ BEGIN
 	);
 end
 select * from Reservation;
+
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Payment')
 BEGIN
+
 create table Payment(
-	payment_id int primary key,
-	res_id int not null,
+	paymentId int primary key,
+	reservationId int not null,
 	amount int not null,
-	payment_date date null,
-	payment_method varchar(20) null,
+	paymentDate date null,
+	paymentMethod varchar(20) null,
 	status varchar(20) not null
-	foreign key (res_id) references Reservation (reservationId),
+	foreign key (reservationId) references Reservation (reservationId)
 );
 end
 
@@ -97,15 +99,15 @@ values
 go 
 
 
-INSERT INTO Guest (id_number, guest_id, first_name, last_name, phone,email, guest_address)
+INSERT INTO Guest ( guestId,firstName, lastName, phone,email,idNumber,  address)
 VALUES
-     (111111111,1, 'Ahmed', 'Hassan', '01234567890', 'ahmed@example.com','Cairo, Egypt'),
-     (222222222,2, 'Mona', 'Ali', '01122334455', 'mona@example.com','Alexandria, Egypt'),
-     (333333333,3, 'Youssef', 'Ibrahim', '01099887766', 'youssef@example.com','Giza, Egypt');
+     (1, 'Ahmed', 'Hassan', '01234567890', 'ahmed@example.com',111111111,'Cairo, Egypt'),
+     (2, 'Mona', 'Ali', '01122334455', 'mona@example.com',222222222,'Alexandria, Egypt'),
+     (3, 'Youssef', 'Ibrahim', '01099887766', 'youssef@example.com',333333333,'Giza, Egypt');
 
 select * from Guest;
 GO
-insert into Employee(employee_id, first_name, last_name, email, phone, employee_role)
+insert into Employee(employeeId, firstName, lastName, email, phone, role)
 values
       (1, 'Sara', 'Kandil', 'sara.kandil@hotel.com', '01012345678', 'Receptionist'),
       (2, 'Omar', 'Hassan', 'omar.hassan@hotel.com', '01098765432', 'Manager'),
@@ -138,7 +140,7 @@ GO
 select * from Reservation;
 
 
-INSERT INTO Payment (payment_id, res_id, amount, payment_date, payment_method, status)
+INSERT INTO Payment (paymentId, reservationId, amount, paymentDate, paymentMethod, status)
 VALUES
     (1, 101, 3000, '2025-01-15', 'Credit Card', 'Completed'),
     (2, 102, 2000, '2025-02-01', 'Cash', 'Pending');

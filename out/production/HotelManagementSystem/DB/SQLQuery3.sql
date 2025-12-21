@@ -100,7 +100,7 @@ create table Payment(
 	payment_date date null,
 	payment_method varchar(20) null,
 	status varchar(20) not null
-	/*foreign key (res_id) references Reservation (reservation_id),*/
+	foreign key (res_id) references Reservation (reservation_id),
 );
 end
 

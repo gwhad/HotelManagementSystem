@@ -11,13 +11,14 @@ public class ReservationMain {
         ReservationDAO resDAO = new ReservationDAO();
 
         try {
+            System.out.println("Existing Reservation: ");
 
             List<Reservation> reservations = resDAO.getAllRes();/*HERE*/
             System.out.println("Existing Reservations: ");
             for (Reservation reservation : reservations) {
                 System.out.println(reservation);
             }
-            StandardRoom newRoom = new StandardRoom(20, 404, 2, true, 900, "Double Room");
+            StandardRoom newRoom = new StandardRoom(10, 404, 2, true, 900, "Double Room");
 
             Reservation newReservation = new Reservation(505, "2-10-2025", "5-10-2025", "checked", newRoom );
             if (!resDAO.isResExists(newReservation.getReservationId())) {

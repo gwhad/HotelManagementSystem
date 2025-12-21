@@ -22,6 +22,7 @@ BEGIN
 	price int not null,
 
 );
+
 end
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Employee')
 BEGIN
@@ -56,7 +57,7 @@ BEGIN
 	check_in_date  date null,
 	check_out_date date null,
 	guest_status   varchar(20) not null,
-	room_id		int not null
+	room_id		int not null,
 	foreign key (room_id) references Room (room_id),
 	foreign key  (guest_id) references Guest (guest_id),
 	);
@@ -88,7 +89,7 @@ create table Payment(
 	payment_date date null,
 	payment_method varchar(20) null,
 	status varchar(20) not null,
-	/*foreign key (res_id) references Reservation (reservation_id),*/
+	foreign key (res_id) references Reservation (reservation_id),
 );
 end
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Room')
@@ -112,7 +113,6 @@ values
 	 (24, 'Gym Access', 100);
 
 go 
-
 
 INSERT INTO Guest (id_number, guest_id, first_name, last_name, phone,email, guest_address)
 VALUES
